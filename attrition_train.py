@@ -121,8 +121,9 @@ print(df.nunique())
 # ============= Drop Columns =============
 
 # EmployeeCount, Over18, StandardHours theres only one unique value and it was same for everyone so that's not needed, dropping this columns
+# EmployeeNumber is just an identifier and should not be used for prediction
 
-cols_to_drop = ['EmployeeCount', 'Over18', 'StandardHours']
+cols_to_drop = ['EmployeeCount', 'Over18', 'StandardHours', 'EmployeeNumber']
 
 df = df.drop(columns=cols_to_drop)
 # print(df.shape)
